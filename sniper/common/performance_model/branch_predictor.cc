@@ -2,6 +2,7 @@
 #include "branch_predictor.h"
 #include "one_bit_branch_predictor.h"
 #include "pentium_m_branch_predictor.h"
+#include "Lab2_predictor.h"
 #include "config.hpp"
 #include "stats.h"
 
@@ -46,6 +47,10 @@ BranchPredictor* BranchPredictor::create(core_id_t core_id)
       else if (type == "pentium_m")
       {
          return new PentiumMBranchPredictor("branch_predictor", core_id);
+      }
+      else if (type == "Lab_2")
+      {
+         return new NNBranchPredictor("branch_predictor", core_id);
       }
       else
       {
