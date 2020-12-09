@@ -1,7 +1,7 @@
 // this code use neural_net_work to build the branch predictor
 
 #include "simulator.h"
-#include "Lab2_predictor.h"
+#include "lab_predictor.h"
 NNBranchPredictor::NNBranchPredictor(String name, core_id_t core_id)
    : BranchPredictor(name, core_id)
    , last_sum(0)
